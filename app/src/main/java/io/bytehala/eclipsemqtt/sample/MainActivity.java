@@ -249,6 +249,7 @@ public class MainActivity extends AppCompatActivity {
 
         // create a client handle
         String clientHandle = uri + clientId;
+        Log.e("IQ", "clientHandle: " + clientHandle);
 
         // last will message
         String message = (String) data.get(ActivityConstants.message);

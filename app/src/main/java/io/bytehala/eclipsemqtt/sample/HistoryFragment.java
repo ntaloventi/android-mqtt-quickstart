@@ -14,6 +14,7 @@ package io.bytehala.eclipsemqtt.sample;
 
 import android.os.Bundle;
 import android.text.Spanned;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 
 import androidx.fragment.app.ListFragment;
@@ -40,6 +41,7 @@ public class HistoryFragment extends ListFragment {
     //Pull history information out of bundle
 
     clientHandle = getArguments().getString("handle");
+    Log.e("IQ", "clientHandle: " + clientHandle );
     Connection connection = Connections.getInstance(getActivity()).getConnection(clientHandle);
 
     Spanned[] history = connection.history();
